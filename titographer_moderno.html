@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c0d0f" />
+  <meta name="description" content="Demostración de tarjeta digital para Titographer: sesiones fotográficas, paquetes, galería y contacto." />
+  <title>Titographer — Tu historia en imágenes · Demostración MSTech Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: dark; --bg:#0c0d0f; --panel:#17181a; --muted:#a3a19f; --white:#f9f6f1; --accent:#e4a56c; --accent-dark:#b4723e; --line:rgba(255,255,255,.11); }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid #f2bd91;outline-offset:4px}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 32px}.demo-bar{background:#26211d;border-bottom:1px solid #554333;text-align:center;padding:10px 16px;color:#e6c8aa;font-size:11px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}.nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:18px}.wordmark{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.075em;font-size:25px;white-space:nowrap}.wordmark span{color:var(--accent)}.nav-links{display:flex;align-items:center;gap:31px;font-size:13px;color:#ccc9c5;font-weight:700}.nav-links a:hover{color:var(--accent)}.outline-btn{padding:12px 18px;border:1px solid #5e544a;border-radius:100px;font-size:12px;white-space:nowrap;font-weight:800;transition:all .2s}.outline-btn:hover{border-color:var(--accent);background:#241b15}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center;min-height:650px;padding-top:38px;padding-bottom:100px}.eyebrow{display:flex;align-items:center;gap:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.25em;font-size:11px;font-weight:800}.eyebrow:before{content:'';width:28px;height:1px;background:var(--accent)}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Manrope,sans-serif;letter-spacing:-.062em}h1{font-size:clamp(58px,6.3vw,91px);line-height:1.035;font-weight:700;margin:29px 0 26px}h1 i{font-style:normal;color:var(--accent)}.hero p{font-size:16px;line-height:1.9;color:#bbb6b0;max-width:460px}.button-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:100px;min-height:52px;padding:0 24px;font-size:13px;font-weight:800;border:1px solid transparent;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:#15110d}.btn-primary:hover{background:#f0b680}.btn-secondary{border-color:#595654;color:var(--white)}.btn-secondary:hover{border-color:var(--accent)}.chevron{font-size:18px}.hero-visual{position:relative;height:570px;min-width:0}.hero-main{position:absolute;inset:0 32px 18px 0;border-radius:240px 240px 18px 18px;overflow:hidden;background:linear-gradient(150deg,#735647,#272022)}.hero-main img{width:100%;height:100%;object-fit:cover;object-position:50% 27%;filter:saturate(.75) contrast(1.04)}.hero-main:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.48));pointer-events:none}.hero-stamp{position:absolute;bottom:0;right:0;width:165px;height:165px;border:11px solid var(--bg);border-radius:50%;background:#e4a56c;color:#282019;display:grid;place-content:center;text-align:center;transform:rotate(9deg)}.hero-stamp strong{font-family:Manrope;font-size:21px;line-height:1.05;letter-spacing:-.06em}.hero-stamp small{font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}.vertical-note{position:absolute;right:4px;top:100px;writing-mode:vertical-rl;letter-spacing:.25em;text-transform:uppercase;font-size:10px;font-weight:800;color:#77716d}
+    .hairline{height:1px;background:var(--line)}.mini-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:30px;padding-bottom:34px}.mini-item{display:flex;gap:14px;align-items:center}.mini-icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid #6a5540;font-size:18px;color:var(--accent)}.mini-item b{font-size:12px;display:block;letter-spacing:.035em}.mini-item span{display:block;font-size:12px;color:#9b9997;margin-top:5px}
+    section{scroll-margin-top:40px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:37px}.section-head h2{font-size:clamp(38px,4.4vw,58px);line-height:1.08;margin:17px 0 0}.section-head p{font-size:14px;color:#b0aba5;max-width:330px;line-height:1.8;margin:0}.gallery-section{padding-top:120px;padding-bottom:118px}.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.shot{position:relative;overflow:hidden;background:linear-gradient(145deg,#5b4c41,#1c1d1e);border-radius:10px;min-height:340px}.shot img{height:100%;width:100%;object-fit:cover;display:block;transition:transform .6s ease;filter:saturate(.72)}.shot:hover img{transform:scale(1.055)}.shot:nth-child(1){grid-column:span 5;height:525px}.shot:nth-child(2){grid-column:span 7;height:525px}.shot:nth-child(3){grid-column:span 7;height:425px}.shot:nth-child(4){grid-column:span 5;height:425px}.shot-caption{position:absolute;bottom:0;left:0;right:0;padding:38px 24px 20px;background:linear-gradient(transparent,rgba(0,0,0,.68));display:flex;align-items:end;justify-content:space-between}.shot-caption b{font-size:19px;letter-spacing:-.03em}.shot-caption span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#e2d9cc}.gallery-foot{text-align:right;color:#8e8c89;font-size:11px;margin:18px 0 0}
+    .plans-section{background:#f1ebe3;color:#1d1b19;padding:114px 0 112px}.plans-section .eyebrow{color:#98633f}.plans-section .eyebrow:before{background:#98633f}.plans-section .section-head p{color:#6c635a}.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:8px;margin-bottom:31px}.tabs::-webkit-scrollbar{display:none}.tab{border:1px solid #d3c7ba;background:transparent;color:#6d6158;padding:13px 24px;border-radius:100px;white-space:nowrap;font-size:13px;font-weight:800;cursor:pointer;transition:.2s}.tab:hover{border-color:#ac8467}.tab[aria-selected=true]{background:#24201e;color:white;border-color:#24201e}.plans-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.plans-intro b{font-family:Manrope;font-size:20px;letter-spacing:-.04em}.plans-intro span{font-size:12px;color:#7b7269}.plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.plan{background:#fffdf9;border:1px solid #e0d7ca;border-radius:15px;padding:26px 23px 24px;display:flex;flex-direction:column;min-height:235px;box-shadow:0 7px 24px rgba(66,43,27,.04)}.plan.featured{background:#27221e;color:#fff;border-color:#27221e}.plan-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.plan-name{font-size:15px;font-weight:800}.plan .tag{font-size:9px;letter-spacing:.11em;border:1px solid #e0d6c9;border-radius:30px;padding:5px 7px;color:#796959;text-transform:uppercase}.plan.featured .tag{color:#f1bc8b;border-color:#795d48}.plan-price{font-family:Manrope;font-size:33px;font-weight:800;letter-spacing:-.075em;margin-top:28px}.plan-price small{font:500 11px 'DM Sans';letter-spacing:0;margin-left:5px;color:#877b72}.plan.featured .plan-price small{color:#bfb6ac}.plan-count{font-size:13px;color:#817568;margin-top:5px}.plan.featured .plan-count{color:#d4b8a3}.plan-link{margin-top:auto;padding-top:22px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #bfa995;padding-bottom:7px}.plan.featured .plan-link{border-color:#a37b5e;color:#e6b489}.fine-print{margin:25px 0 0;color:#817668;line-height:1.7;font-size:11px}
+    .about-section{padding:124px 0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:88px}.about-image{position:relative;min-height:430px;overflow:hidden;background:#5b4b3d;border-radius:14px}.about-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.75)}.about-copy h2{font-size:clamp(40px,4.7vw,60px);line-height:1.08;margin:22px 0}.about-copy p{font-size:15px;color:#ada8a2;line-height:1.9;max-width:425px}.about-copy ul{list-style:none;margin:24px 0 34px;padding:0;display:grid;gap:15px}.about-copy li{font-size:13px;color:#ddd7d1}.about-copy li:before{content:'↗';color:var(--accent);font-weight:900;margin-right:13px}
+    .contact{border:1px solid #4c3930;border-radius:22px;background:radial-gradient(circle at 95% 10%,#402b20 0,transparent 37%),linear-gradient(125deg,#1e1b1a,#131415);text-align:center;padding:85px 26px;margin-bottom:80px}.contact .eyebrow{justify-content:center}.contact h2{font-size:clamp(42px,6vw,76px);line-height:1.08;max-width:700px;margin:25px auto 24px}.contact p{font-size:14px;line-height:1.8;color:#c3b9b1;margin:0 auto 31px;max-width:480px}.contact .btn{font-size:14px}.footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:29px;padding-bottom:100px;color:#8b8987;font-size:12px}.footer strong{color:#e4e0da}.footer a:hover{color:var(--accent)}.phone-action{position:fixed;bottom:17px;left:16px;right:16px;display:none;background:#d9a16f;color:#16110d;border-radius:40px;min-height:51px;align-items:center;justify-content:center;gap:10px;text-align:center;z-index:20;box-shadow:0 8px 40px #0008;font-size:13px;font-weight:800}
+    @media(max-width:940px){.wrap{padding:0 24px}.hero{gap:26px;min-height:570px}.hero-visual{height:480px}.hero-stamp{height:130px;width:130px}.hero-stamp strong{font-size:17px}.hero-stamp small{font-size:8px}h1{font-size:clamp(48px,7vw,70px)}.plans-grid{grid-template-columns:repeat(2,1fr)}.about-section{gap:40px}}
+    @media(max-width:700px){.wrap{padding:0 20px}.demo-bar{font-size:9px;line-height:1.4}.nav{height:75px}.wordmark{font-size:22px}.nav-links{display:none}.outline-btn{padding:10px 13px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:37px;padding-bottom:45px;gap:40px;min-height:0}.hero .eyebrow{font-size:10px}.hero h1{font-size:clamp(49px,12vw,69px);line-height:1.06;margin:20px 0}.hero p{font-size:14px;line-height:1.75}.button-row{margin-top:26px;gap:10px}.btn{min-height:49px;padding:0 18px;font-size:12px}.hero-visual{height:455px}.hero-main{inset:0 22px 22px 0}.hero-stamp{right:-8px}.vertical-note{right:0}.mini-strip{gap:8px;padding-top:24px;padding-bottom:26px}.mini-item{display:block;text-align:center}.mini-icon{margin:0 auto 12px;width:35px;height:35px}.mini-item b{font-size:11px}.mini-item span{font-size:10px;line-height:1.3}.gallery-section{padding-top:84px;padding-bottom:86px}.section-head{display:block;margin-bottom:28px}.section-head h2{font-size:42px}.section-head p{margin-top:18px}.gallery{gap:10px}.shot:nth-child(1),.shot:nth-child(4){grid-column:span 6;height:290px;min-height:0}.shot:nth-child(2),.shot:nth-child(3){grid-column:span 6;height:290px;min-height:0}.shot-caption{padding:35px 10px 12px;display:block}.shot-caption b{font-size:13px;display:block}.shot-caption span{font-size:8px;letter-spacing:.09em}.gallery-foot{text-align:left}.plans-section{padding:80px 0}.plans-grid{grid-template-columns:1fr 1fr;gap:9px}.plan{padding:18px 15px;min-height:214px}.plan-name{font-size:12px}.plan .tag{font-size:8px;padding:4px 5px}.plan-price{font-size:26px;margin-top:24px}.plan-price small{font-size:9px}.plan-count{font-size:11px}.plan-link{font-size:9px;padding-top:16px}.tabs{margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}.tab{padding:12px 18px;font-size:12px}.plans-intro{align-items:start}.plans-intro b{font-size:18px}.plans-intro span{max-width:110px;text-align:right;line-height:1.5}.about-section{grid-template-columns:1fr;gap:40px;padding:85px 0}.about-image{min-height:370px}.about-copy h2{font-size:42px}.contact{padding:64px 17px;margin-bottom:52px;border-radius:17px}.contact h2{font-size:42px}.footer{font-size:11px;line-height:1.6;padding-bottom:95px}.phone-action{display:flex}}
+    @media(max-width:380px){.wrap{padding:0 16px}.hero-visual{height:385px}.hero-stamp{height:118px;width:118px}.plan{padding:16px 12px}.plan-price{font-size:24px}.plan .tag{display:none}.gallery .shot{height:245px!important}.phone-action{bottom:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:after,*:before{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="demo-bar">✦ Propuesta visual de MSTech Digital · Sitio de demostración, no oficial ✦</div>
+  <header class="wrap nav">
+    <a class="wordmark" href="#inicio" aria-label="Ir al inicio de Titographer">TITOGRAPHER<span>.</span></a>
+    <nav class="nav-links" aria-label="Navegación principal"><a href="#portafolio">Portafolio</a><a href="#paquetes">Paquetes</a><a href="#experiencia">Servicios</a></nav>
+    <a class="outline-btn" href="#contacto">Hablemos ↗</a>
+  </header>
+  <main>
+    <section id="inicio" class="wrap hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Estudio fotográfico</div>
+        <h1>Momentos<br>que merecen<br><i>quedarse.</i></h1>
+        <p>Cada historia tiene su propia luz. Imagina una sesión hecha para capturar las personas, los detalles y los instantes que hacen única la tuya.</p>
+        <div class="button-row"><a class="btn btn-primary" href="#paquetes">Conoce los paquetes <span class="chevron">↗</span></a><a class="btn btn-secondary" href="#portafolio">Ver galería ↓</a></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-main"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=85" alt="Retrato artístico ilustrativo de una mujer" /></div>
+        <div class="vertical-note">El arte de recordar</div>
+        <div class="hero-stamp"><small>Tu momento</small><strong>en buenas<br>manos ✳</strong></div>
+      </div>
+    </section>
+    <div class="hairline wrap"></div>
+    <div class="wrap mini-strip" aria-label="Tipos de sesión">
+      <div class="mini-item"><div class="mini-icon">✦</div><div><b>En estudio</b><span>Retratos con carácter</span></div></div>
+      <div class="mini-item"><div class="mini-icon">◌</div><div><b>En exterior</b><span>Luz y escenarios reales</span></div></div>
+      <div class="mini-item"><div class="mini-icon">♡</div><div><b>A tu manera</b><span>Domicilio y temática</span></div></div>
+    </div>
+    <div class="hairline wrap"></div>
+    <section class="wrap gallery-section" id="portafolio">
+      <div class="section-head"><div><div class="eyebrow">Nuestro universo visual</div><h2>Historias en<br>cada fotografía.</h2></div><p>Una vista de cómo se podría presentar el estilo y los tipos de sesión de Titographer.</p></div>
+      <div class="gallery">
+        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=85" alt="Retrato femenino de muestra" /><div class="shot-caption"><b>Retrato en estudio</b><span>01 / 04</span></div></div>
+        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85" alt="Fotografía de retrato editorial de muestra" /><div class="shot-caption"><b>Sesión personal</b><span>02 / 04</span></div></div>
+        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=85" alt="Fotografía profesional de muestra" /><div class="shot-caption"><b>Sesión temática</b><span>03 / 04</span></div></div>
+        <div class="shot"><img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=85" alt="Retrato masculino de muestra" /><div class="shot-caption"><b>Retratos especiales</b><span>04 / 04</span></div></div>
+      </div>
+      <p class="gallery-foot">* Imágenes ilustrativas de stock. No corresponden a trabajos de Titographer.</p>
+    </section>
+    <section class="plans-section" id="paquetes">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Elige cómo recordar</div><h2>Tu sesión,<br>a tu medida.</h2></div><p>Explora los paquetes compartidos por el estudio. Selecciona el tipo de sesión que más te interesa.</p></div>
+        <div class="tabs" role="tablist" aria-label="Tipo de sesión">
+          <button class="tab" type="button" data-type="estudio" role="tab" aria-selected="true">En estudio</button>
+          <button class="tab" type="button" data-type="exterior" role="tab" aria-selected="false">Exterior</button>
+          <button class="tab" type="button" data-type="domicilio" role="tab" aria-selected="false">A domicilio</button>
+          <button class="tab" type="button" data-type="tematica" role="tab" aria-selected="false">Temática</button>
+        </div>
+        <div class="plans-intro"><b id="type-title">Estudio fotográfico</b><span id="type-subtitle">4 paquetes disponibles</span></div>
+        <div class="plans-grid" id="plans-grid" aria-live="polite"></div>
+        <p class="fine-print">Los precios y la cantidad de fotografías provienen de la información compartida por el estudio. Detalles, condiciones y disponibilidad se confirman directamente con Titographer.</p>
+      </div>
+    </section>
+    <section class="wrap about-section" id="experiencia">
+      <div class="about-image"><img loading="lazy" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1100&q=85" alt="Cámara fotográfica profesional, imagen ilustrativa" /></div>
+      <div class="about-copy"><div class="eyebrow">Distintas formas de crear</div><h2>La sesión perfecta es la que cuenta tu historia.</h2><p>Estudio, locaciones al aire libre, en casa o con una idea temática. Descubre las opciones disponibles y cuéntale al equipo qué tienes en mente.</p><ul><li>Sesiones en estudio</li><li>Sesiones en exterior</li><li>Sesiones a domicilio</li><li>Fotografía temática</li></ul><a class="btn btn-secondary" href="#paquetes">Explorar paquetes ↗</a></div>
+    </section>
+    <section class="wrap" id="contacto"><div class="contact"><div class="eyebrow">Hagamos algo especial</div><h2>Tu próxima historia empieza aquí.</h2><p>¿Tienes una fecha o una idea en mente? Consulta directamente los detalles de tu sesión y encuentra el paquete ideal.</p><a class="btn btn-primary" href="https://wa.me/525654707615?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20una%20sesi%C3%B3n%20fotogr%C3%A1fica." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp ↗</a></div></section>
+  </main>
+  <footer class="wrap footer"><div><strong>TITOGRAPHER.</strong> · Propuesta de presentación digital</div><div>Demostración conceptual creada por <strong>MSTech Digital</strong>. No es un sitio oficial.</div><div><a href="#inicio">Volver arriba ↑</a></div></footer>
+  <a class="phone-action" href="https://wa.me/525654707615?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20una%20sesi%C3%B3n%20fotogr%C3%A1fica." target="_blank" rel="noopener noreferrer">✉ &nbsp; Cotizar sesión por WhatsApp ↗</a>
+  <script>
+    const whatsapp='https://wa.me/525654707615?text=';
+    const groups={
+      estudio:{name:'Estudio fotográfico',plans:[['Básico',3,800],['Esencial',5,1300],['Premium',8,1800],['Signature',12,2300]]},
+      exterior:{name:'Sesión en exterior',plans:[['Esencial',8,2000],['Premium',14,2400],['Signature',20,2800]]},
+      domicilio:{name:'Sesión a domicilio',plans:[['Esencial',6,1500],['Premium',10,1900],['Signature',14,2400]]},
+      tematica:{name:'Sesión temática',plans:[['Esencial',6,1300],['Premium',10,1700],['Signature',14,2100]]}
+    };
+    function renderPlans(type){
+      const group=groups[type];if(!group)return;
+      document.getElementById('type-title').textContent=group.name;
+      document.getElementById('type-subtitle').textContent=group.plans.length+' paquetes disponibles';
+      const nf=new Intl.NumberFormat('es-MX');
+      const grid=document.getElementById('plans-grid');grid.replaceChildren();
+      group.plans.forEach(([name,count,price],index)=>{
+        const card=document.createElement('article');card.className='plan'+(name==='Premium'?' featured':'');
+        const top=document.createElement('div');top.className='plan-top';const nameEl=document.createElement('span');nameEl.className='plan-name';nameEl.textContent=name;top.append(nameEl);
+        if(name==='Premium'){const tag=document.createElement('span');tag.className='tag';tag.textContent='Destacado';top.append(tag)}
+        const p=document.createElement('div');p.className='plan-price';p.textContent='$'+nf.format(price);const currency=document.createElement('small');currency.textContent='MXN';p.append(currency);
+        const countEl=document.createElement('div');countEl.className='plan-count';countEl.textContent=count+' fotografías';
+        const link=document.createElement('a');link.className='plan-link';link.target='_blank';link.rel='noopener noreferrer';link.href=whatsapp+encodeURIComponent('Hola, me interesa el paquete '+name+' de '+group.name+' ($'+nf.format(price)+'). ¿Podrían darme más información?');link.textContent='Consultar paquete';const arrow=document.createElement('span');arrow.textContent='↗';link.append(arrow);
+        card.append(top,p,countEl,link);grid.append(card);
+      });
+      document.querySelectorAll('.tab').forEach(tab=>{const active=tab.dataset.type===type;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1});
+    }
+    document.querySelectorAll('.tab').forEach((tab,index,all)=>{tab.addEventListener('click',()=>renderPlans(tab.dataset.type));tab.addEventListener('keydown',event=>{if(event.key!=='ArrowRight'&&event.key!=='ArrowLeft')return;event.preventDefault();const next=(index+(event.key==='ArrowRight'?1:-1)+all.length)%all.length;all[next].focus();renderPlans(all[next].dataset.type)})});
+    renderPlans('estudio');
+  </script>
+</body>
+</html>
